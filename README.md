@@ -41,8 +41,8 @@ systemctl daemon-reload --user
 ```
 
 [!NOTE]
-    Podman require absolute pathes.
-    Personally I still keep all OpenWRT things in `~/build/LEDE`.
+Podman require absolute pathes.
+Personally I still keep all OpenWRT things in `~/build/LEDE`.
 
 
 Usage GNU/Linux
@@ -72,8 +72,8 @@ podman exec -ti owrt-builder bash
 ```
 
 [!NOTE]
-    I mount additionally `.gitconfig`, `.ssh`, `.config` to be able to push directly from the container.
-    In addition I use rootless container, with the same user id and --userns=keep-id, to have everything the same as on my main system.
+I mount additionally `.gitconfig`, `.ssh`, `.config` to be able to push directly from the container.
+In addition I use rootless container, with the same user id and --userns=keep-id, to have everything the same as on my main system.
 
 ### Build
 
