@@ -40,9 +40,9 @@ edit ~/.config/containers/systemd/owrt-builder.build  # ensure you have correct 
 systemctl daemon-reload --user
 ```
 
-[!NOTE]
-Podman require absolute pathes.
-Personally I still keep all OpenWRT things in `~/build/LEDE`.
+> [!NOTE]
+> Podman require absolute pathes.
+> Personally I still keep all OpenWRT things in `~/build/LEDE`.
 
 
 Usage GNU/Linux
@@ -71,9 +71,9 @@ systemctl --user start owrt-builder.service
 podman exec -ti owrt-builder bash
 ```
 
-[!NOTE]
-I mount additionally `.gitconfig`, `.ssh`, `.config` to be able to push directly from the container.
-In addition I use rootless container, with the same user id and --userns=keep-id, to have everything the same as on my main system.
+> [!NOTE]
+> I mount additionally `.gitconfig`, `.ssh`, `.config` to be able to push directly from the container.
+> In addition I use rootless container, with the same user id and --userns=keep-id, to have everything the same as on my main system.
 
 ### Build
 
