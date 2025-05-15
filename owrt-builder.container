@@ -1,0 +1,18 @@
+[Unit]
+Description=OpenWRT Builder
+
+[Container]
+Image=owrt-builder.build
+
+Exec=sleep infinity
+
+ContainerName=owrt-builder
+HostName=owrt-builder
+
+Volume=$HOME/build/LEDE:/home/user/LEDE
+Volume=$HOME/.gitconfig:/home/user/.gitconfig
+Volume=$HOME/.ssh:/home/user/.ssh
+Volume=$HOME/.config:/home/user/.config
+
+User=1000
+PodmanArgs=--userns=keep-id

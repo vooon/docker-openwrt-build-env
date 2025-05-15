@@ -1,0 +1,6 @@
+[Unit]
+Description=OpenWRT Builder Image
+
+[Build]
+ImageTag=owrt-builder:latest
+File=$HOME/build/LEDE/docker-openwrt-builder/Dockerfile
