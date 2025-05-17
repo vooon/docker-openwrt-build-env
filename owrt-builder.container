@@ -6,6 +6,7 @@ Description=OpenWRT Builder
 Image=ghcr.io/vooon/docker-openwrt-build-env:bookworm
 
 Exec=sleep infinity
+RunInit=true
 
 ContainerName=owrt-builder
 HostName=owrt-builder
