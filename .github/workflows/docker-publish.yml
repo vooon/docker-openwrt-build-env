@@ -9,11 +9,11 @@ on:
   schedule:
     - cron: '21 17 * * *'
   push:
-    branches: [ "bookworm" ]
+    branches: [ "bullseye" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
   pull_request:
-    branches: [ "bookworm" ]
+    branches: [ "bullseye" ]
 
 env:
   # Use docker.io for Docker Hub if empty
