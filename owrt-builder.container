@@ -3,7 +3,7 @@ Description=OpenWRT Builder
 
 [Container]
 # Image=owrt-builder.build
-Image=ghcr.io/vooon/docker-openwrt-build-env:bookworm
+Image=ghcr.io/vooon/docker-openwrt-build-env:bullseye
 
 Exec=sleep infinity
 RunInit=true
