@@ -1,16 +1,18 @@
-FROM debian:bookworm
+FROM fedora:42
 
-RUN apt-get update && \
-    apt-get install -y \
-        sudo time git-core subversion build-essential g++ bash make \
-        libssl-dev patch libncurses5 libncurses5-dev zlib1g-dev gawk \
-        flex gettext wget unzip xz-utils \
-        python3 python3-distutils-extra python3-setuptools swig rsync curl \
-        libsnmp-dev liblzma-dev libpam0g-dev cpio rsync gcc-multilib qemu-utils \
-	vim-nox tree most tig colordiff && \
-    apt-get clean && \
-    useradd -m user && \
-    echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
+RUN true \
+ && dnf update -y \
+ && dnf install -y --setopt install_weak_deps=False --skip-broken \
+    bash-completion bzip2 file gcc gcc-c++ git-core make ncurses-devel patch \
+    rsync tar unzip wget which diffutils python3 python3-setuptools perl-base \
+    perl-Data-Dumper perl-File-Compare perl-File-Copy perl-FindBin \
+    perl-IPC-Cmd perl-JSON-PP perl-lib perl-Thread-Queue perl-Time-Piece \
+    qemu-img qemu-tools curl zstd \
+    vim tree most tig colordiff \
+ && dnf clean all
+
+RUN useradd -m user \
+ && echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
 
 # set system wide dummy git config
 RUN git config --system user.name "user" && git config --system user.email "user@example.com"
