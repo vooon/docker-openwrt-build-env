@@ -1,5 +1,7 @@
 FROM fedora:42
 
+LABEL org.opencontainers.image.description "OpenWRT build environment"
+
 RUN true \
  && dnf update -y \
  && dnf install -y --setopt install_weak_deps=False --skip-broken \
