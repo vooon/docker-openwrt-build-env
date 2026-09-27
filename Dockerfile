@@ -9,7 +9,7 @@ RUN true \
     rsync tar unzip wget which diffutils python3 python3-setuptools perl-base \
     perl-Data-Dumper perl-File-Compare perl-File-Copy perl-FindBin perl-open \
     perl-IPC-Cmd perl-JSON-PP perl-lib perl-Thread-Queue perl-Time-Piece \
-    qemu-img qemu-tools curl zstd clang \
+    qemu-img qemu-tools curl zstd clang swig \
     vim tree most tig colordiff \
  && dnf clean all
 
